@@ -1,0 +1,15 @@
+cc_library_headers {
+    name: "qti_kernel_headers",
+    arch: {
+        arm: {
+            generated_headers: ["generate_kernel_headers_arm"],
+            export_generated_headers: ["generate_kernel_headers_arm"],
+        },
+        arm64: {
+            generated_headers: ["generate_kernel_headers_arm64"],
+            export_generated_headers: ["generate_kernel_headers_arm64"],
+        },
+    },
+    vendor: true,
+    recovery_available: true,
+}
